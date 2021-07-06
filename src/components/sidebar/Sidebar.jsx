@@ -1,24 +1,9 @@
 import React from 'react'
-
-import './sidebar.css'
-
-import logo from '../../assets/images/logo.png'
-
-import sidebarItems from '../../assets/JsonData/sidebar_routes.json'
 import { Link } from 'react-router-dom'
-
-const SidebarItem = ({active, icon, title}) => {
-	const activeStatus = active ? 'sidebar__item-inner--active' : '';
-
-	return (
-		<div className="sidebar__item">
-			<div className={`sidebar__item-inner ${activeStatus}`}>
-				<i className={icon} />
-				<span>{ title }</span>
-			</div>
-		</div>
-	)
-}
+import logo from '../../assets/images/logo.png'
+import sidebarItems from '../../assets/JsonData/sidebar_routes.json'
+import SidebarItem from '../common/SidebarItem'
+import './sidebar.css'
 
 const Sidebar = ({ location: { pathname } }) => {
 	const activeItem = sidebarItems.findIndex(item => item.route === pathname);
