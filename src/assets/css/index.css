@@ -61,3 +61,24 @@ input {
 input:focus {
   border: 2px solid var(--main-color);
 }
+
+/* PAGE HEADER (DASHBOARD, CUSTOMER, ...) */
+.page-header {
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+
+/* CARD FOR CHART */
+.card {
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: var(--border-radius);
+  background-color: var(--main-bg);
+  box-shadow: var(--box-shadow);
+}
+.full-height {
+  height: 100%;
+}
+.card.full-height {
+  height: calc(100% - 30px);
+}
