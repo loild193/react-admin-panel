@@ -9,6 +9,21 @@
   --second-color: #62b4ff;
   --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
+  --main-color-blue: #349eff;
+  --second-color-blue: #62b4ff;
+
+  --main-color-red: #fb0b12;
+  --second-color-red: #ff4a6b;
+
+  --main-color-cyan: #10d4d2;
+  --second-color-cyan: #2ae9e6;
+
+  --main-color-green: #019707;
+  --second-color-green: #4caf50;
+
+  --main-color-orange: #d68102;
+  --second-color-orange: #fca11a;
+
   --sidebar-width: 300px;
   --border-radius: 15px;
   --topnav-height: 110px;
@@ -68,7 +83,7 @@ input:focus {
   text-transform: capitalize;
 }
 
-/* CARD FOR CHART */
+/* CARD */
 .card {
   padding: 30px;
   margin-bottom: 30px;
@@ -81,4 +96,17 @@ input:focus {
 }
 .card.full-height {
   height: calc(100% - 30px);
+}
+
+.card__header {
+  text-transform: capitalize;
+}
+
+.card > div ~ div {
+  margin-top: 30px;
+}
+
+.card__footer {
+  text-align: center;
+  text-transform: capitalize;
 }
