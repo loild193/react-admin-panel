@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
+  /* MAIN COLOR */
   --main-bg: #fff;
   --second-bg: #fafafb;
   --txt-color: #455560;
@@ -9,6 +10,18 @@
   --second-color: #62b4ff;
   --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
+  /* THEME */
+  --main-bg-light: #fff;
+  --second-bg-light: #fafafb;
+  --txt-color-light: #455560;
+  --box-shadow-light: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  --main-bg-dark: #2d2d2d;
+  --second-bg-dark: #202020;
+  --txt-color-dark: #bbb;
+  --box-shadow-dark: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+
+  /* MORE COLOR */
   --main-color-blue: #349eff;
   --second-color-blue: #62b4ff;
 
@@ -109,4 +122,34 @@ input:focus {
 .card__footer {
   text-align: center;
   text-transform: capitalize;
+}
+
+.light-background {
+  background-color: var(--main-bg-light);
+  color: var(--txt-color-ligt);
+}
+.dark-background {
+  background-color: var(--main-bg-dark);
+  color: var(--txt-color-dark);
+}
+
+.blue-color {
+  background-color: var(--main-color-blue);
+  color: #fff;
+}
+.red-color {
+  background-color: var(--main-color-red);
+  color: #fff;
+}
+.cyan-color {
+  background-color: var(--main-color-cyan);
+  color: #fff;
+}
+.green-color {
+  background-color: var(--main-color-green);
+  color: #fff;
+}
+.orange-color {
+  background-color: var(--main-color-orange);
+  color: #fff;
 }

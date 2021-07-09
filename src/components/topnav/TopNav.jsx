@@ -4,6 +4,7 @@ import notifications from '../../assets/JsonData/notification.json'
 import userMenus from '../../assets/JsonData/user_menus.json'
 import { renderFooter, renderItem, renderUserToggle } from '../../utils/dropdown'
 import DropDown from '../dropdown/DropDown'
+import ThemeMenu from '../theme-menu/ThemeMenu'
 import './topnav.css'
 
 const currentUser = {
@@ -36,7 +37,7 @@ const TopNav = () => {
 					/>
 				</div>
 				<div className="topnav__right-item">
-					<DropDown />
+					<ThemeMenu />
 				</div>
 			</div>
 		</div>

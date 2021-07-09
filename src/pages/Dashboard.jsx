@@ -1,5 +1,6 @@
 import React from 'react'
 import Chart from 'react-apexcharts'
+import { useSelector } from 'react-redux'
 import statusCards from '../assets/JsonData/status-card-data.json'
 import Card from '../components/common/Card'
 import StatusCard from '../components/status-card'
@@ -40,6 +41,8 @@ const chartOptions = {
 }
 
 const Dashboard = () => {
+	const themeReducer = useSelector(state => state.ThemeReducer.mode);
+	
 	return (
 		<>
 			<h2 className="page-header">Dashboard</h2>
@@ -62,7 +65,13 @@ const Dashboard = () => {
 				<div className="col-6">
 					<div className="card full-height">
 						<Chart 
-							options={chartOptions.options}
+							options={themeReducer === 'theme-mode-dark' ? {
+								...chartOptions.options,
+								theme: { mode: 'dark' },
+							} : {
+								...chartOptions.options,
+								theme: { mode: 'light' },
+							}}
 							series={chartOptions.series}
 							type="line"
 							height="100%"
