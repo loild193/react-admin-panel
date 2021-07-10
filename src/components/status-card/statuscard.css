@@ -62,3 +62,12 @@
 .status-card:hover {
   color: var(--txt-color);
 }
+
+@media screen and (max-width: 1400px) {
+  .status-card__icon {
+    font-size: var(--icon-fontsize-1024);
+  }
+  .status-card__info > h4 {
+    font-size: var(--icon-fontsize-1024);
+  }
+}

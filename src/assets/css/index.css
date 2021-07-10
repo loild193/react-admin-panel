@@ -37,6 +37,7 @@
   --main-color-orange: #d68102;
   --second-color-orange: #fca11a;
 
+  /* WIDTH, HEIGHT */
   --sidebar-width: 300px;
   --border-radius: 15px;
   --topnav-height: 110px;
@@ -46,6 +47,10 @@
     0.32,
     1.275
   );
+
+  /* RESPONSIVE */
+  --sidebar-width-1024: 120px;
+  --icon-fontsize-1024: 1.5rem;
 }
 
 * {

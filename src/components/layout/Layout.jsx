@@ -9,6 +9,8 @@ import './layout.css'
 
 const Layout = () => {
 	const themeReducer = useSelector(state => state.ThemeReducer);
+	const shiftedLeft = useSelector(state => state.SidebarReducer.shiftedLeft);
+
 	const dispatch = useDispatch();
 
 	useEffect(() => {
@@ -24,7 +26,7 @@ const Layout = () => {
 			<Route render={ props => 
 				<div className={`layout ${themeReducer.mode} ${themeReducer.color}`}>
 					<Sidebar {...props} />
-					<div className="layout__content">
+					<div className={`layout__content ${shiftedLeft && 'left'}`}>
 						<TopNav />
 						<div className="layout__content-main">
 							<Routes />

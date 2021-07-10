@@ -10,11 +10,11 @@ const chartOptions = {
 	series: [
 		{
 			name: 'Online Customers',
-			data: [40,70,20,90,36,80,30,91,60]
+			data: [40, 70, 20, 90, 36, 80, 30, 91, 60]
 		}, 
 		{
 			name: 'Store Customers',
-			data: [40, 30, 70, 80, 40, 16, 40, 20, 51, 10]
+			data: [40, 30, 70, 80, 40, 16, 40, 20, 51]
 		},
 	],
 	options: {
@@ -42,6 +42,7 @@ const chartOptions = {
 
 const Dashboard = () => {
 	const themeReducer = useSelector(state => state.ThemeReducer.mode);
+	const shiftedLeft = useSelector(state => state.SidebarReducer.shiftedLeft);
 	
 	return (
 		<>
@@ -75,6 +76,7 @@ const Dashboard = () => {
 							series={chartOptions.series}
 							type="line"
 							height="100%"
+							width={`${shiftedLeft ? '1154px': '1094px'}`}
 						/>
 					</div>
 				</div>

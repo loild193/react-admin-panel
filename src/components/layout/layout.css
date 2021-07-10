@@ -6,6 +6,10 @@
   padding-left: var(--sidebar-width);
   background-color: var(--second-bg);
   min-height: 100vh;
+  transition: padding-left 0.3s ease 0s;
+}
+.layout__content.left {
+  padding-left: var(--sidebar-width-1024);
 }
 
 .layout__content-main {
