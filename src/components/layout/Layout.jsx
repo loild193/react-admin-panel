@@ -14,8 +14,8 @@ const Layout = () => {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		const theme = localStorage.getItem('themeMode', 'theme-mode-light');
-		const color = localStorage.getItem('colorMode', 'theme-mode-light');
+		const theme = localStorage.getItem('themeMode');
+		const color = localStorage.getItem('colorMode');
 
 		dispatch(setMode(theme));
 		dispatch(setColor(color));

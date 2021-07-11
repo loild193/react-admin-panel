@@ -21,6 +21,7 @@ const chartOptions = {
 		color: ['#6ab04c', '#2980b9'],
 		chart: {
 			background: 'transparent',
+			redrawOnParentResize: true,
 		},
 		dataLabels: {
 			enabled: false,
@@ -42,7 +43,6 @@ const chartOptions = {
 
 const Dashboard = () => {
 	const themeReducer = useSelector(state => state.ThemeReducer.mode);
-	const shiftedLeft = useSelector(state => state.SidebarReducer.shiftedLeft);
 	
 	return (
 		<>
@@ -76,7 +76,6 @@ const Dashboard = () => {
 							series={chartOptions.series}
 							type="line"
 							height="100%"
-							width={`${shiftedLeft ? '1154px': '1094px'}`}
 						/>
 					</div>
 				</div>
