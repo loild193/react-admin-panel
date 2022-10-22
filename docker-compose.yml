@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  react_admin_panel_web:
+    container_name: react_admin_panel
+    image: react_admin_panel:latest
+    build:
+      context: .
+      target: release
+      args:
+        APP_ENV: production
+    environment:
+      TERM: linux
+      LANG: "C.UTF-8"
+      LOG_ROTATION_DAY: 7
+      NODE_ENV: production
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+        max-file: "2"
+    restart: "always"
+    ports:
+      - 3001:3000
